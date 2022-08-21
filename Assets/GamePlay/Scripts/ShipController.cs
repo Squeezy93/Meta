@@ -15,7 +15,6 @@ public class ShipController : MonoBehaviour
     public void SetMove(Vector2 move)
     {
         _desireMove = move;
-        _desireMove.y = transform.position.y;  
     }
 
     public void SetDirection(Vector3 move)
@@ -30,12 +29,12 @@ public class ShipController : MonoBehaviour
     }
 
     private void Turn(float deltaTime)
-    {       
-        var quat = Quaternion.LookRotation(_desireLook);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, quat, _turnSpeed* deltaTime);
-
-        Debug.DrawRay(transform.position, _desireLook);
-
+    {
+        if (_desireLook != Vector3.zero)
+        {
+            var quat = Quaternion.LookRotation(_desireLook);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, quat, _turnSpeed * deltaTime);
+        }     
     }
 
     private void Move(float deltaTime)
@@ -57,7 +56,7 @@ public class ShipController : MonoBehaviour
             }
         }
 
-        transform.Translate(_currentVelocity.x,0, _currentVelocity.y);
+        transform.position = transform.position + new Vector3(_currentVelocity.x, 0, _currentVelocity.y) ;
         _desireMove = Vector2.zero;
     }
 }

@@ -37,7 +37,7 @@ public class PlayerInputManager : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             var cam_ray = _camera.ScreenPointToRay(Input.mousePosition);
-            var _d = Mathf.Abs(Vector3.Dot((_playerTransform.transform.position), _playerTransform.transform.up));
+            var _d = Mathf.Abs(Vector3.Dot((_playerTransform.transform.position), Vector3.up));
             float _a = (-_d - Vector3.Dot(_playerTransform.transform.up, cam_ray.origin)) / Vector3.Dot(_playerTransform.transform.up, cam_ray.direction);
             var point = cam_ray.origin + cam_ray.direction * _a;          
             _playerTransform.SetDirection(point - _playerTransform.transform.position);
