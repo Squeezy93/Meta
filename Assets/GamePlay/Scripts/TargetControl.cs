@@ -6,7 +6,10 @@ using UnityEngine;
 public class TargetControl : MonoBehaviour
 {
 
+
     private LookFollow _lookFollow;
+    private Transform _currentTarget;
+    public Transform TargetTarget => _currentTarget;
     private Transform m_MainTarget;
 
     [SerializeField] List<Transform> _targetList;
@@ -21,7 +24,8 @@ public class TargetControl : MonoBehaviour
     {
         if (!_lookFollow.CanFollowCurrentTarget())
         {
-            _lookFollow.SetTarget( GetTarget());
+            _currentTarget = GetTarget();
+            _lookFollow.SetTarget(_currentTarget);
         }
     }
 
