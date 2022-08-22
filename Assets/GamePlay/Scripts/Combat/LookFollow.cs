@@ -23,8 +23,9 @@ public class LookFollow : MonoBehaviour
         m_FollowTarget = target;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        _isLookAtTarget = false;
         if (m_FollowTarget != null && _controlObject != null)
         {
             CalculateAngle();
@@ -37,8 +38,8 @@ public class LookFollow : MonoBehaviour
     {       
         var localTarget = m_FollowTarget.position;
         localTarget.y = _controlObject.position.y;
-        var direction = localTarget - _controlObject.position;
-        _isCanFollow = CheckCanFollow(direction);
+        var direction = localTarget - _controlObject.position;      
+        _isCanFollow = CheckCanFollow(direction) && m_FollowTarget != null && m_FollowTarget.gameObject.activeSelf;       
         _goalAngle = Quaternion.LookRotation(direction);        
     }
 

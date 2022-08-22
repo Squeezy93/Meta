@@ -9,11 +9,13 @@ public class TurrentAttackController : MonoBehaviour
 
     private LookFollow _lookFollow;
     private ReloadController _reloadController;
+    private TargetControl _targetControl;
 
     private void Awake()
     {
         _lookFollow = GetComponent<LookFollow>();
         _reloadController = GetComponent<ReloadController>();
+        _targetControl = GetComponent<TargetControl>();
     }
 
     private void FixedUpdate()
@@ -30,6 +32,8 @@ public class TurrentAttackController : MonoBehaviour
        
         if(m_AttackPoint != null)
         {
+            var damage = _targetControl.Target.GetComponent<IDamagable>();
+            damage?.TakeDamage(new DamageData());
             m_AttackPoint.gameObject.SetActive(true);
             Invoke(nameof(TurnOffFireEffect),0.1f);
         }

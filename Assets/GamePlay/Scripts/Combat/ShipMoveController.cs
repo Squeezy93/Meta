@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipController : MonoBehaviour
+public class ShipMoveController : MonoBehaviour
 {
     private Vector3 _desireLook;
     private Vector2 _desireMove;

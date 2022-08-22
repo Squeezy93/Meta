@@ -10,13 +10,13 @@ public class PlayerInputManager : MonoBehaviour
     private Vector2 _moveDirection;
     private Vector2 _lookDirection;
 
-    private ShipController _playerTransform;
+    private ShipMoveController _playerTransform;
 
     private Camera _camera;
 
     private void Start()
     {
-        _playerTransform = FindObjectOfType<ShipController>();
+        _playerTransform = FindObjectOfType<ShipMoveController>();
         _camera = Camera.main;
     }
 
