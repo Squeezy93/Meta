@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Target : MonoBehaviour, IDamagable
+namespace GamePlay.Combat
 {
-    public void TakeDamage(DamageData damageData)
+    public class Target : MonoBehaviour, IDamagable
     {
-        gameObject.SetActive(false);
-    }   
+        public void TakeDamage(DamageData damageData)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }

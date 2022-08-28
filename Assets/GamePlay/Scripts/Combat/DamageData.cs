@@ -1,8 +1,11 @@
 
 using UnityEngine;
 
-public class DamageData
+namespace GamePlay.Combat
 {
-    public int Damage;
-    public GameObject gameobjectSource;
+    public class DamageData
+    {
+        public int Damage;
+        public GameObject gameobjectSource;
+    }
 }

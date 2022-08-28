@@ -2,47 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurrentAttackController : MonoBehaviour
+namespace GamePlay.Combat
 {
-    [SerializeField] private Transform m_AttackPoint;
-    [SerializeField] private bool m_AutoAttack;
-
-    private LookFollow _lookFollow;
-    private ReloadController _reloadController;
-    private TargetControl _targetControl;
-
-    private void Awake()
+    public class TurrentAttackController : MonoBehaviour
     {
-        _lookFollow = GetComponent<LookFollow>();
-        _reloadController = GetComponent<ReloadController>();
-        _targetControl = GetComponent<TargetControl>();
-    }
+        [SerializeField] private Transform m_AttackPoint;
+        [SerializeField] private bool m_AutoAttack;
 
-    private void FixedUpdate()
-    {
-        if(_reloadController.IsReloadReady && _lookFollow.IsLookAtTarget)
+        private LookFollow _lookFollow;
+        private ReloadController _reloadController;
+        private TargetControl _targetControl;
+
+        private void Awake()
         {
-            Attack();
-            _reloadController.Reload();
-        }
-    }
-
-    private void Attack()
-    {
-       
-        if(m_AttackPoint != null)
-        {
-            var damage = _targetControl.Target.GetComponent<IDamagable>();
-            damage?.TakeDamage(new DamageData());
-            m_AttackPoint.gameObject.SetActive(true);
-            Invoke(nameof(TurnOffFireEffect),0.1f);
+            _lookFollow = GetComponent<LookFollow>();
+            _reloadController = GetComponent<ReloadController>();
+            _targetControl = GetComponent<TargetControl>();
         }
 
+        private void FixedUpdate()
+        {
+            if (_reloadController.IsReloadReady && _lookFollow.IsLookAtTarget)
+            {
+                Attack();
+                _reloadController.Reload();
+            }
+        }
 
-    }
+        private void Attack()
+        {
 
-    private void TurnOffFireEffect()
-    {
-        m_AttackPoint.gameObject.SetActive(false);
+            if (m_AttackPoint != null)
+            {
+                var damage = _targetControl.Target.GetComponent<IDamagable>();
+                damage?.TakeDamage(new DamageData());
+                m_AttackPoint.gameObject.SetActive(true);
+                Invoke(nameof(TurnOffFireEffect), 0.1f);
+            }
+
+
+        }
+
+        private void TurnOffFireEffect()
+        {
+            m_AttackPoint.gameObject.SetActive(false);
+        }
     }
 }

@@ -1,5 +1,8 @@
 
-public interface IDamagable
+namespace GamePlay.Combat
 {
-    void TakeDamage(DamageData damageData);
+    public interface IDamagable
+    {
+        void TakeDamage(DamageData damageData);
+    }
 }
