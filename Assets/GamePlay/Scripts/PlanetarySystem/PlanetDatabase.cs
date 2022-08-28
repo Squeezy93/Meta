@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "PlanetarySystem/Planet database")]
-public class PlanetDatabase : ScriptableObject
+namespace GamePlay.PlanetarySystem
 {
-    [SerializeField] private string _planetarySystemName;
-    [SerializeField] private List<PlanetData> _planetDatas;
-    public List<PlanetData> PlanetDatas => _planetDatas;
+    [CreateAssetMenu(menuName = "PlanetarySystem/Planet database")]
+    public class PlanetDatabase : ScriptableObject
+    {
+        [SerializeField] private string _planetarySystemName;
+        [SerializeField] private List<PlanetData> _planetDatas;
+        public List<PlanetData> PlanetDatas => _planetDatas;
+    }
 }

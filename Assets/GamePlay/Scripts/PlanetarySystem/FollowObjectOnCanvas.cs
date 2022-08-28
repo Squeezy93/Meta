@@ -1,20 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class FollowObjectOnCanvas : MonoBehaviour
+namespace GamePlay.PlanetarySystem
 {
-    public Transform TargetFollow;
-    public Camera Camera;
-    private Vector3 position;
-
-
-    private void FixedUpdate()
+    public class FollowObjectOnCanvas : MonoBehaviour
     {
-        if(TargetFollow)
+        public event Action OnButtonClickHandler = delegate { };
+        public Transform TargetFollow;
+        public Camera Camera;
+        [SerializeField] private Button m_Button;
+
+        private void Awake()
         {
-            position = Camera.WorldToScreenPoint(TargetFollow.position);
-            transform.position = position;
+            m_Button = GetComponent<Button>();
+            m_Button.onClick.AddListener(() => OnButtonClickHandler.Invoke());
+        }
+
+        private void FixedUpdate()
+        {
+            if (TargetFollow)
+            {
+                var position = Camera.WorldToScreenPoint(TargetFollow.position);
+                transform.position = position;
+            }
         }
     }
 }

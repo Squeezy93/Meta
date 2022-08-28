@@ -2,21 +2,34 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlanetSystemInfoManager : MonoBehaviour
+namespace GamePlay.PlanetarySystem
 {
-    [SerializeField] private Camera _systemCamera; 
-    [SerializeField] private FollowObjectOnCanvas _buttonHandlerPrefab;
-
-    public void SetPlanets(PlanetController[] planetControllers)
+    public class PlanetSystemInfoManager : MonoBehaviour
     {
-        foreach (var planetController in planetControllers)
-        {
-            var buttonHandler = Instantiate(_buttonHandlerPrefab, transform);
-            buttonHandler.Camera = _systemCamera;
-            buttonHandler.TargetFollow = planetController.PlanetObject;
-        }
-        
-    }
+        [SerializeField] private PlanetInfoView m_PlanetInfoView;
+        [SerializeField] private Camera m_SystemCamera;
+        [SerializeField] private FollowObjectOnCanvas m_ButtonHandlerPrefab;
 
+        public void SetPlanets(PlanetController[] planetControllers)
+        {
+            foreach (var planetController in planetControllers)
+            {
+                var buttonHandler = Instantiate(m_ButtonHandlerPrefab, transform);
+                buttonHandler.Camera = m_SystemCamera;
+                buttonHandler.TargetFollow = planetController.PlanetObject;
+
+                buttonHandler.OnButtonClickHandler += () =>
+                {
+                    OpenPlanetInfoView(planetController.PlanetData);
+                };
+            }
+
+        }
+
+        private void OpenPlanetInfoView(PlanetData planetData)
+        {
+            m_PlanetInfoView.OpenPlanetInfoView(planetData);
+        }
+
+    }
 }
