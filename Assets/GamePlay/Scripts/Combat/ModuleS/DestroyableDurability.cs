@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class DestroyableDurability: IDurability
 {
-    private float _durability;
+    private float _durability = 1;
 
     public void ChangeValue(float delta)
     {
