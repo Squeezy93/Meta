@@ -35,5 +35,10 @@ namespace GamePlay.PlanetarySystem
 
             m_PlanetSystemInfoManager.SetPlanets(planetControllers);
         }
+
+        public PlanetController FindPlanet(PlanetData planetData)
+        {
+            return planetControllers.FirstOrDefault(x => x.PlanetData.PlanetId == planetData.PlanetId);
+        }
     }
 }

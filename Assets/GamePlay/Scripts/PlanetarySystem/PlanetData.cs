@@ -8,6 +8,7 @@ namespace GamePlay.PlanetarySystem
     [Serializable]
     public class PlanetData
     {
+        public string PlanetId;
         public Vector3 PlanetVectorPosition;
         public Vector3 PlanetAngleMove;
 

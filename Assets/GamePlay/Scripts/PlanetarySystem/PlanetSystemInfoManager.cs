@@ -8,22 +8,19 @@ namespace GamePlay.PlanetarySystem
     {
         [SerializeField] private PlanetInfoView m_PlanetInfoView;
         [SerializeField] private Camera m_SystemCamera;
-        [SerializeField] private FollowObjectOnCanvas m_ButtonHandlerPrefab;
-
+        [SerializeField] private PlanetClickController m_ButtonHandlerPrefab;
+        [SerializeField] private Transform m_SpawnRoot;
         public void SetPlanets(PlanetController[] planetControllers)
         {
             foreach (var planetController in planetControllers)
             {
-                var buttonHandler = Instantiate(m_ButtonHandlerPrefab, transform);
-                buttonHandler.Camera = m_SystemCamera;
-                buttonHandler.TargetFollow = planetController.PlanetObject;
+                var buttonHandler = Instantiate(m_ButtonHandlerPrefab, m_SpawnRoot);
+                var mover = buttonHandler.GetComponent<FollowObjectOnCanvas>();
+                mover.Camera = m_SystemCamera;
+                mover.TargetFollow = planetController.PlanetObject;
 
-                buttonHandler.OnButtonClickHandler += () =>
-                {
-                    OpenPlanetInfoView(planetController.PlanetData);
-                };
+                buttonHandler.OnButtonClickHandler += OpenPlanetInfoView;
             }
-
         }
 
         private void OpenPlanetInfoView(PlanetData planetData)

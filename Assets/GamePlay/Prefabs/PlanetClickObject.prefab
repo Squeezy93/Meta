@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5201043790356103948}
   - component: {fileID: 5201043790356103949}
   - component: {fileID: 1157813471066503527}
+  - component: {fileID: 8450540812863954635}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PlanetClickObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFollow: {fileID: 0}
   Camera: {fileID: 0}
-  m_Button: {fileID: 0}
 --- !u!114 &1157813471066503527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,3 +136,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8450540812863954635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5201043790356103951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85204a38fb3a3294eaafc4b27a3866e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Button: {fileID: 1157813471066503527}
