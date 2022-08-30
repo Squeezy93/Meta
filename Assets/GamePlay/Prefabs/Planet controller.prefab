@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 503653659692026907}
   - component: {fileID: 503653659692026906}
   - component: {fileID: 503653659692026909}
+  - component: {fileID: 3314335994298262254}
   m_Layer: 0
   m_Name: Planet view
   m_TagString: Untagged
@@ -90,11 +91,23 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503653659692026911}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3314335994298262254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503653659692026911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffcc9f96f1282f4c9411fbd6d35e13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &503653660488163221
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlanetObject: {fileID: 1662109480828383979}
-  _rotatePlanet: {fileID: 4931801910994061898}
+  m_RotatePlanet: {fileID: 4931801910994061898}
+  m_TriggerHandler: {fileID: 3314335994298262254}
+  _interfaceManager: {fileID: 0}
 --- !u!1 &751020842090726688
 GameObject:
   m_ObjectHideFlags: 0

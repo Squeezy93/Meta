@@ -1,5 +1,120 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &182349311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 182349312}
+  m_Layer: 5
+  m_Name: PlanetView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &182349312
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182349311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2049660424}
+  m_Father: {fileID: 2841500050070806380}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2049660423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049660424}
+  - component: {fileID: 2049660426}
+  - component: {fileID: 2049660425}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2049660424
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049660423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 182349312}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 414}
+  m_SizeDelta: {x: 399.0638, y: 138.0699}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2049660426
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049660423}
+  m_CullTransparentMesh: 1
+--- !u!114 &2049660425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049660423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041F\u043B\u0430\u043D\u0435\u0442\u0430"
 --- !u!1 &195976349296939093
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +738,7 @@ RectTransform:
   m_Children:
   - {fileID: 5277964238902522519}
   - {fileID: 4517032814241406578}
+  - {fileID: 182349312}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -707,6 +823,7 @@ MonoBehaviour:
   m_CameraManager: {fileID: 0}
   m_MapView: {fileID: 1806861671967590060}
   m_GamePlayView: {fileID: 7766719913944825443}
+  m_PlanetView: {fileID: 0}
 --- !u!114 &8941397883354547756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,11 +2901,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b480e07398ce25f40bf6daf760d2d849, type: 3}
---- !u!224 &9201512180864671738 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 9201512180791597431, guid: b480e07398ce25f40bf6daf760d2d849, type: 3}
-  m_PrefabInstance: {fileID: 207423117}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &9201512180864671737 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9201512180791597428, guid: b480e07398ce25f40bf6daf760d2d849, type: 3}
@@ -2800,3 +2912,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e84ef83cedea94ba30fc0fb87f2076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &9201512180864671738 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9201512180791597431, guid: b480e07398ce25f40bf6daf760d2d849, type: 3}
+  m_PrefabInstance: {fileID: 207423117}
+  m_PrefabAsset: {fileID: 0}
