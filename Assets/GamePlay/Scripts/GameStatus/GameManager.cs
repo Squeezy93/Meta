@@ -34,6 +34,10 @@ public class GameManager : MonoBehaviour
         {
             _instance.PlanetSystemMapState();
         }
+        if (state is PlanetSystemSpace spaceState)
+        {
+            _instance.SpaceFlyState();
+        }
     }
 
     private void CombatState()
@@ -44,6 +48,7 @@ public class GameManager : MonoBehaviour
     private void SpaceFlyState()
     {
         m_InterfaceManager.OpenView("GamePlay");
+        m_PlayerShip.gameObject.SetActive(true);
     }
 
     private void PlanetLandState()

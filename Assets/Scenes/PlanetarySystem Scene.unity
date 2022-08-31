@@ -296,6 +296,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!224 &377553664 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8275099412990219218, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
+  m_PrefabInstance: {fileID: 487925026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &487925026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,14 +396,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3198427402050504673, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3354393609862459357, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8857984993257597748, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
+      propertyPath: m_Side1
+      value: 
+      objectReference: {fileID: 377553664}
+    - target: {fileID: 8857984993257597748, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
+      propertyPath: m_Side2
+      value: 
+      objectReference: {fileID: 820527619}
     - target: {fileID: 8941397883354547756, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
       propertyPath: m_SystemCamera
       value: 
@@ -420,6 +429,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2494270618330254748, guid: a5e929111974710419c0d2866560a11a, type: 3}
   m_PrefabInstance: {fileID: 1276470262}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &820527619 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3287822004351523737, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
+  m_PrefabInstance: {fileID: 487925026}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &990207213
 GameObject:

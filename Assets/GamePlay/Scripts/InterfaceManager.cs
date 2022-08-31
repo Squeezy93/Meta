@@ -20,7 +20,7 @@ namespace GamePlay.SpaceSystem
             m_InterfaceViews.Add("Map", m_MapView);
             m_InterfaceViews.Add("GamePlay", m_GamePlayView);
             m_InterfaceViews.Add("Planet", m_PlanetView);
-            GamePlayViewOpen();
+           
         }
 
         private void MapViewOpen()
