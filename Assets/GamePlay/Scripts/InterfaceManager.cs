@@ -23,7 +23,7 @@ namespace GamePlay.SpaceSystem
             GamePlayViewOpen();
         }
 
-        public void MapViewOpen()
+        private void MapViewOpen()
         {
             m_CameraManager.MapCameraTurn();
             OpenInterface("Map");
@@ -44,7 +44,7 @@ namespace GamePlay.SpaceSystem
            
         }
 
-        public void GamePlayViewOpen()
+        private void GamePlayViewOpen()
         {
             m_CameraManager.PlayerCameraTurn();
             OpenInterface("GamePlay");

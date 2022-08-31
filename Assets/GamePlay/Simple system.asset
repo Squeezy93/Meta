@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555cb0eb9b1a52047a4e407fa3f7d39a, type: 3}
   m_Name: Simple system
   m_EditorClassIdentifier: 
-  _planetarySystemName: 
+  _planetarySystemName: TestSystem
   _planetDatas:
   - PlanetId: 
     PlanetVectorPosition: {x: 20, y: 0, z: 0}

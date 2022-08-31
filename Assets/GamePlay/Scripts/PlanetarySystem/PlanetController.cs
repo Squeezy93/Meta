@@ -1,3 +1,4 @@
+using GamePlay.GameStatus;
 using GamePlay.SpaceSystem;
 using System;
 using System.Collections;
@@ -36,7 +37,7 @@ namespace GamePlay.PlanetarySystem
             var landing = other.GetComponent<PlayerLandingController>();
             if(landing != null)
             {
-                _interfaceManager.OpenView("Planet");
+                GameManager.SetStatus(new PlanetLandState() { PlanetData = _planetData });
             }
         }
     }
