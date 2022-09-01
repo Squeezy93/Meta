@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _planetarySystemName: TestSystem
   _planetDatas:
-  - PlanetId: 
+  - PlanetId: planet 1
     PlanetVectorPosition: {x: 20, y: 0, z: 0}
     PlanetAngleMove: {x: 0, y: 6, z: 0}
     PlanetSize: 2
-  - PlanetId: 
+  - PlanetId: planet 2
     PlanetVectorPosition: {x: 26, y: 0, z: 0}
     PlanetAngleMove: {x: 0, y: -3, z: 0}
     PlanetSize: 2
-  - PlanetId: 
+  - PlanetId: planet 3
     PlanetVectorPosition: {x: 32, y: 0, z: 0}
     PlanetAngleMove: {x: 0, y: 2, z: 0}
     PlanetSize: 3
-  - PlanetId: 
+  - PlanetId: planet 4
     PlanetVectorPosition: {x: 45, y: 0, z: 0}
     PlanetAngleMove: {x: 0, y: 1, z: 0}
     PlanetSize: 5

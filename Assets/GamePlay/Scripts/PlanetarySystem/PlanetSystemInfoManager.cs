@@ -18,7 +18,7 @@ namespace GamePlay.PlanetarySystem
                 var mover = buttonHandler.GetComponent<FollowObjectOnCanvas>();
                 mover.Camera = m_SystemCamera;
                 mover.TargetFollow = planetController.PlanetObject;
-
+                buttonHandler.SetPlanetData(planetController.PlanetData);
                 buttonHandler.OnButtonClickHandler += OpenPlanetInfoView;
             }
         }

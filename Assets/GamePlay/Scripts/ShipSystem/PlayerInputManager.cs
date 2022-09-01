@@ -4,22 +4,25 @@ using System.Drawing;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
-namespace GamePlay.Combat
+namespace GamePlay.ShipSystem
 {
     public class PlayerInputManager : MonoBehaviour
     {
+        private ShipMoveController _playerTransform;
+        private AutoNavigator autoNavigator;
 
         private Vector2 _moveDirection;
         private Vector2 _lookDirection;
 
-        private ShipMoveController _playerTransform;
+        
         private Camera _camera;
 
         public LeftJoystick moveJoystick;
 
         private void Start()
         {
-            _playerTransform = FindObjectOfType<ShipMoveController>();
+            _playerTransform = GetComponent<ShipMoveController>();
+            autoNavigator = GetComponent<AutoNavigator>();
             _camera = Camera.main;
         }
 
@@ -34,7 +37,16 @@ namespace GamePlay.Combat
             _moveDirection.x = Input.GetAxis("Horizontal");
             _moveDirection.y = Input.GetAxis("Vertical");
 
-            _playerTransform.SetMove(_moveDirection);
+            if(_moveDirection.sqrMagnitude > float.Epsilon)
+            {
+                autoNavigator.ActiveAutoMove = false;
+            }
+          
+            if(autoNavigator.ActiveAutoMove == false)
+            {
+                _playerTransform.SetMove(_moveDirection);
+            }
+            
 
 
             if (Input.GetMouseButton(0))

@@ -296,11 +296,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!224 &377553664 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8275099412990219218, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-  m_PrefabInstance: {fileID: 487925026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &487925026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -400,14 +395,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8857984993257597748, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-      propertyPath: m_Side1
-      value: 
-      objectReference: {fileID: 377553664}
-    - target: {fileID: 8857984993257597748, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-      propertyPath: m_Side2
-      value: 
-      objectReference: {fileID: 820527619}
     - target: {fileID: 8941397883354547756, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
       propertyPath: m_SystemCamera
       value: 
@@ -429,11 +416,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2494270618330254748, guid: a5e929111974710419c0d2866560a11a, type: 3}
   m_PrefabInstance: {fileID: 1276470262}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &820527619 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3287822004351523737, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-  m_PrefabInstance: {fileID: 487925026}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &990207213
 GameObject:
@@ -765,6 +747,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1870145447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2494270618330254750, guid: a5e929111974710419c0d2866560a11a, type: 3}
+  m_PrefabInstance: {fileID: 1276470262}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870145442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b1279b0392b229499a4f7917a147f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1870145448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870145442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cf825c9ed1805439edca1c8bd7eefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveAutoMove: 0
+  m_MoveController: {fileID: 1870145447}
 --- !u!1 &1940131710
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GamePlay.Combat
+namespace GamePlay.ShipSystem
 {
     public class CameraController : MonoBehaviour
     {

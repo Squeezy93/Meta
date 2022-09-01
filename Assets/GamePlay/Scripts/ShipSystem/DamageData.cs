@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-namespace GamePlay.Combat
+namespace GamePlay.ShipSystem
 {
     public class DamageData
     {

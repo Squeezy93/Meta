@@ -1,5 +1,5 @@
 
-namespace GamePlay.Combat
+namespace GamePlay.ShipSystem
 {
     public interface IDamagable
     {

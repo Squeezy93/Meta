@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace GamePlay.Combat
+namespace GamePlay.ShipSystem
 {
     public class ShipMoveController : MonoBehaviour
     {
@@ -43,7 +43,7 @@ namespace GamePlay.Combat
 
             if (_desireMove.sqrMagnitude > Mathf.Epsilon)
             {
-                _currentVelocity += _desireMove.normalized * _accelMove * deltaTime;
+                _currentVelocity = Vector2.MoveTowards(_currentVelocity, _desireMove.normalized * _maxSpeed, _accelMove * deltaTime);
                 if (_currentVelocity.magnitude > _maxSpeed)
                 {
                     _currentVelocity = _currentVelocity.normalized * _maxSpeed;
@@ -53,12 +53,12 @@ namespace GamePlay.Combat
             {
                 if (_currentVelocity.sqrMagnitude > Mathf.Epsilon)
                 {
-                    _currentVelocity -= _currentVelocity * Vector2.one * _accelStop * deltaTime;
+                    _currentVelocity = Vector2.MoveTowards(_currentVelocity, Vector2.zero, _accelStop * deltaTime);
                 }
             }
 
             transform.position = transform.position + new Vector3(_currentVelocity.x, 0, _currentVelocity.y);
-            _desireMove = Vector2.zero;
+            
         }
     }
 }
