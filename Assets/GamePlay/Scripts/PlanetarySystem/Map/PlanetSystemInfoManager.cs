@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace GamePlay.PlanetarySystem
+
+namespace GamePlay.PlanetarySystem.Map
 {
     public class PlanetSystemInfoManager : MonoBehaviour
     {
         [SerializeField] private PlanetInfoView m_PlanetInfoView;
         [SerializeField] private Camera m_SystemCamera;
-        [SerializeField] private PlanetClickController m_ButtonHandlerPrefab;
+        [SerializeField] private MapPlanetaryObject m_ButtonHandlerPrefab;
         [SerializeField] private Transform m_SpawnRoot;
         public void SetPlanets(PlanetController[] planetControllers)
         {
@@ -18,7 +19,7 @@ namespace GamePlay.PlanetarySystem
                 var mover = buttonHandler.GetComponent<FollowObjectOnCanvas>();
                 mover.Camera = m_SystemCamera;
                 mover.TargetFollow = planetController.PlanetObject;
-                buttonHandler.SetPlanetData(planetController.PlanetData);
+                buttonHandler.SetPlanetData(planetController);
                 buttonHandler.OnButtonClickHandler += OpenPlanetInfoView;
             }
         }

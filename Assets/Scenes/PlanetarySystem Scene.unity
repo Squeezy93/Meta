@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: m_SystemCamera
       value: 
       objectReference: {fileID: 48414732}
+    - target: {fileID: 8941397883354547756, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
+      propertyPath: m_ButtonHandlerPrefab
+      value: 
+      objectReference: {fileID: 389958186673680883, guid: d0ffe658d9d706d46aeeca96f37aad8c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
 --- !u!114 &487925027 stripped

@@ -1,5 +1,6 @@
 using GamePlay.GameStatus;
 using GamePlay.PlanetarySystem;
+using GamePlay.PlanetarySystem.Map;
 using GamePlay.SpaceSystem;
 using System.Collections;
 using System.Collections.Generic;

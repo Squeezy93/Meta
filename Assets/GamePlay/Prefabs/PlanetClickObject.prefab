@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5201043790356103948}
   - component: {fileID: 5201043790356103949}
   - component: {fileID: 1157813471066503527}
-  - component: {fileID: 8450540812863954635}
+  - component: {fileID: 389958186673680883}
   m_Layer: 5
   m_Name: PlanetClickObject
   m_TagString: Untagged
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8450540812863954635
+--- !u!114 &389958186673680883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,7 +145,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5201043790356103951}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85204a38fb3a3294eaafc4b27a3866e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 09303241606c69f408efc77fc330de58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FollowObjectOnCanvas: {fileID: 5201043790356103949}
   m_Button: {fileID: 1157813471066503527}

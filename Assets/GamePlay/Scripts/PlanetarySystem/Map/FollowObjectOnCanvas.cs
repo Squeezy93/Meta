@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace GamePlay.PlanetarySystem
+namespace GamePlay.PlanetarySystem.Map
 {
     public class FollowObjectOnCanvas : MonoBehaviour
     {
