@@ -7,5 +7,6 @@ namespace GamePlay.PlanetarySystem.PlanetLand
     public class SitePlanetData
     {
         public string Name;
+        public string InterfaceWindowKey;
     }
 }

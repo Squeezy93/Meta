@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlaneterySystemManager m_PlaneterySystemManager;
     [SerializeField] CameraManager m_CameraManager;
     [SerializeField] GameObject m_PlayerShip;
-    [SerializeField] InterfaceManager m_InterfaceManager;
     [SerializeField] PlanetSystemInfoManager m_PlanetSystemInfoManager;
 
     private void Awake()
@@ -48,20 +47,20 @@ public class GameManager : MonoBehaviour
 
     private void SpaceFlyState()
     {
-        m_InterfaceManager.OpenView("GamePlay");
+        InterfaceManager.OpenView("GamePlay");
         m_PlayerShip.gameObject.SetActive(true);
     }
 
     private void PlanetLandState()
     {
         m_PlayerShip.gameObject.SetActive(false);
-        m_InterfaceManager.OpenView("Planet");
+        InterfaceManager.OpenView("Planet");
     }
 
     private void PlanetSystemMapState()
     {
         m_CameraManager.MapCameraTurn();
-        m_InterfaceManager.OpenView("Map");
+        InterfaceManager.OpenView("Map");
     }
 
     private void GalacticMapState()

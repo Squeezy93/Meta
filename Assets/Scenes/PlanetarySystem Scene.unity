@@ -399,23 +399,8 @@ PrefabInstance:
       propertyPath: m_SystemCamera
       value: 
       objectReference: {fileID: 48414732}
-    - target: {fileID: 8941397883354547756, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-      propertyPath: m_ButtonHandlerPrefab
-      value: 
-      objectReference: {fileID: 389958186673680883, guid: d0ffe658d9d706d46aeeca96f37aad8c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
---- !u!114 &487925027 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1172565605, guid: d674cbb1da79e154c946fbf872eade91, type: 3}
-  m_PrefabInstance: {fileID: 487925026}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618c2316191f4ee41a86689fd5e6f652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &809330900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2494270618330254748, guid: a5e929111974710419c0d2866560a11a, type: 3}
@@ -528,7 +513,6 @@ MonoBehaviour:
   m_PlaneterySystemManager: {fileID: 2017145596}
   m_CameraManager: {fileID: 1787751321}
   m_PlayerShip: {fileID: 1870145442}
-  m_InterfaceManager: {fileID: 487925027}
   m_PlanetSystemInfoManager: {fileID: 1172565605}
 --- !u!4 &1075171773
 Transform:

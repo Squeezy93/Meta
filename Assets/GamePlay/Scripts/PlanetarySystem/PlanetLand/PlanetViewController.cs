@@ -37,13 +37,13 @@ namespace GamePlay.PlanetarySystem.PlanetLand
 
         private void InitLocalSite()
         {
-            m_LandSiteControllers[0].SetData(new SitePlanetData() { Name = "Космодром" });
-            m_LandSiteControllers[1].SetData(new SitePlanetData() { Name = "Ангар" });
-            m_LandSiteControllers[2].SetData(new SitePlanetData() { Name = "Правительство" });         
+            m_LandSiteControllers[0].SetData(new SitePlanetData() { Name = "Космодром", InterfaceWindowKey ="SpacePort" });
+            m_LandSiteControllers[1].SetData(new SitePlanetData() { Name = "Ангар", InterfaceWindowKey = "Hangar" });
+            m_LandSiteControllers[2].SetData(new SitePlanetData() { Name = "Правительство", InterfaceWindowKey = "Government" });         
 
-            m_LandSiteControllers[m_LandSiteControllers.Count - 3].SetData(new SitePlanetData() { Name = "Рынок ресурсов" });
-            m_LandSiteControllers[m_LandSiteControllers.Count - 2].SetData(new SitePlanetData() { Name = "Рынок оборудования" });
-            m_LandSiteControllers[m_LandSiteControllers.Count - 1].SetData(new SitePlanetData() { Name = "Справочная" });
+            m_LandSiteControllers[m_LandSiteControllers.Count - 3].SetData(new SitePlanetData() { Name = "Рынок ресурсов", InterfaceWindowKey = "ResourceMarket" });
+            m_LandSiteControllers[m_LandSiteControllers.Count - 2].SetData(new SitePlanetData() { Name = "Рынок оборудования", InterfaceWindowKey = "EquipmentMarket" });
+            m_LandSiteControllers[m_LandSiteControllers.Count - 1].SetData(new SitePlanetData() { Name = "Справочная", InterfaceWindowKey = "ReferenceService" });
         }
 
         public void InitHexes(List<SitePlanetData> landData, List<SitePlanetData> playerSiteData)

@@ -41,9 +41,7 @@ namespace GamePlay.ShipSystem
         {
             var direction = _targetTransform.position - transform.position;
             m_MoveController.SetDirection(direction);
-            m_MoveController.SetMove(new Vector3(direction.x, direction.z, 0));
-            Debug.Log(direction);
-            Debug.DrawRay(transform.position, direction);
+            m_MoveController.SetMove(new Vector3(direction.x, direction.z, 0));         
         }
     }
 }
